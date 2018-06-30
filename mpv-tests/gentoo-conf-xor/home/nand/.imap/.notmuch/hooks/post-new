@@ -1,0 +1,61 @@
+#!/bin/sh
+
+# Local delivery
+notmuch tag +system -- tag:new and '(from:root or from:root@nand.wakku.to or from:root@haasn.xyz or to:root)'
+notmuch tag +rkhunter -- tag:new and tag:system and subject:rkhunter
+notmuch tag +smartd -- tag:new and tag:system and subject:SMART
+
+# Important stuff
+notmuch tag +important -- tag:new and '(to:wichtig@* or to:urgent@* or to:important@*)'
+notmuch tag +bank      -- tag:new and '(to:sparkasse@haasn.xyz)'
+notmuch tag +highlight -- tag:new and 'haasn and not (to:haasn or from:haasn)'
+notmuch tag +highlight -- tag:new and 'to:mention@noreply.github.com'
+notmuch tag +git       -- tag:new and 'from:haasn and to:git@haasn.xyz'
+
+# Servers
+notmuch tag +tina -- tag:new and '(to: root@tina)'
+
+# Spam
+notmuch tag -new +spam -- tag:new and 'subject:/\*\*\*Spam\*\*\*/'
+notmuch tag -new +spam -- tag:new and from:news@nvidia.com
+notmuch tag -new +spam -- tag:new and to:gog@nand.wakku.to
+notmuch tag -new +spam -- tag:new and to:jefta@haasn.xyz
+notmuch tag -new +spam -- tag:new and to:patreon@haasn.xyz
+notmuch tag -new +spam -- tag:new and to:spectrocoin@nand.wakku.to
+notmuch tag -new +spam -- tag:new and to:ecoin@nand.wakku.to
+notmuch tag -new +deleted -- tag:new and to:linuxpool.informatik@uni-ulm.de and from:gitlab@gitlab.informatik.uni-ulm.de
+notmuch tag -new +spam -- tag:new and 'to:trash*@nand.wakku.to'
+notmuch tag -new +spam -- tag:new and 'to:google-summer-of-code-students-list@googlegroups.com'
+notmuch tag -new +spam -- tag:new and to:amazon@haasn.xyz
+
+# Uni-related tags
+notmuch tag +icinga   -- tag:new and '(from:icinga@devel02.informatik.uni-ulm.de or from:nagios@haasn.xyz or to:icinga.*@haasn.xyz)'
+notmuch tag +calm     -- tag:new and '(from:calm@lists.uni-ulm.de or to:calm@lists.uni-ulm.de)'
+
+# Mailing list-related tags
+notmuch tag +diagrams -new -- tag:new and to:diagrams-discuss@googlegroups.com
+notmuch tag +zfs -- tag:new and to:zfs@haasn.xyz
+
+# GitHub tags
+for project in mpv bower sxiv qutebrowser; do
+    notmuch tag +${project} -- tag:new and to:${project}@noreply.github.com
+done
+
+# Mailing list tags
+notmuch tag +list +ffmpeg -- tag:new and to:ffmpeg-devel@ffmpeg.org
+notmuch tag +list +argyll -- tag new and to:argyllcms@freelists.org
+notmuch tag +list +zfs -- tag:new and to:zfs-discuss@list.zfsonlinux.org
+
+# Other tags
+notmuch tag +rssqueue -- tag:new and to:rss@haasn.xyz
+notmuch tag +keybase -- tag:new and to:keybase@haasn.xyz
+notmuch tag +btc -- tag:new and '(to:coinbase@haasn.xyz or to:kraken@haasn.xyz or to:ecoin@haasn.xyz or to:gate@haasn.xyz)'
+
+# Don't re-tag my own mails
+notmuch tag -new -- tag:new and tag:sent
+notmuch tag -new -- from:niklas.haas@uni-ulm.de
+notmuch tag -new -- from:nand@nand.wakku.to
+notmuch tag -new -- from:nand@haasn.xyz
+
+# Clean up
+notmuch tag +unread -new -- tag:new

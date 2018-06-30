@@ -1,0 +1,66 @@
+#General
+profile=gpu-hq
+gpu-api=vulkan
+spirv-compiler=nvidia
+cursor-autohide=100
+keep-open=yes
+
+#Priority
+slang=de,deu,ger,en,eng
+alang=de,deu,ger,ja,jp,jpn,en,eng
+
+#Subs
+demuxer-mkv-subtitle-preroll=yes
+sub-ass-vsfilter-blur-compat=no
+sub-fix-timing=no
+
+#Volume
+volume=100
+volume-max=200
+
+#Screenshot
+screenshot-format=png
+screenshot-high-bit-depth=no
+screenshot-png-compression=1
+screenshot-jpeg-quality=95
+screenshot-directory="C:\Users\eXmendiC\Desktop"
+
+#Deband
+deband=no
+deband-iterations=4
+deband-threshold=50
+deband-range=16
+deband-grain=0
+
+#Grain & Resizer
+glsl-shader="C:\mpv\Shaders\noise_static_luma.hook"
+glsl-shader="C:\mpv\Shaders\ravu-r4.hook"
+
+#Resizer
+scale=ewa_lanczos
+dscale=ewa_lanczos
+cscale=sinc
+cscale-window=blackman 
+cscale-radius=3
+
+#Interpolation
+blend-subtitles=yes
+video-sync=display-resample
+interpolation=yes
+tscale=linear
+
+[HorribleSubs]
+profile-desc=cond:string.match(p.filename, "HorribleSubs")~=nil
+deband=yes
+
+[Erai-Raws]
+profile-desc=cond:string.match(p.filename, "Erai%-raws")~=nil
+deband=yes
+
+[1080p.WebRip]
+profile-desc=cond:string.match(p.filename, "1080p.WebRip")~=nil
+deband=yes
+
+[1080p.Web-DL]
+profile-desc=cond:string.match(p.filename, "1080p.Web%-DL")~=nil
+deband=yes

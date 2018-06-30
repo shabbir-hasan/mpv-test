@@ -1,0 +1,205 @@
+html > ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+html > body[style="margin: 0px"] > img[style="-webkit-user-select:none; display:block; margin:auto;"],
+html > body[style="margin: 0px"] > img[style="-webkit-user-select: none; display: block; margin: auto;"] {
+    position: absolute !important;
+    margin: auto !important;
+    top: 0px !important;
+    left: 0px !important;
+    right: 0px !important;
+    bottom: 0px !important;
+}
+
+* {
+    font-family: Terminus, xos4 Terminus !important;
+    text-shadow: none !important;
+    -webkit-user-select: text !important;
+    animation-duration: 0 !important;
+}
+
+#footer {
+    display: none !important;
+}
+
+/* Color overrides */
+
+:not(*[style*="transparent"], img, pre, code) {
+    background: #080C0D !important;
+    /*color:      #DDCCBB !important;*/
+    color:      #00AA00 !important;
+}
+
+img, img.party-hat {
+    background: none !important;
+}
+
+* {
+    image-rendering: pixelated !important;
+}
+
+a[href], a[href] * {
+    color: #FFAA0F !important;
+}
+
+a:visited, a:visited * {
+    color: #FF5D4A !important;
+}
+
+pre, code {
+    color: #cba !important;
+    background-color: #111 !important;
+    border: 1px dashed #555 !important;
+    padding: 1px !important;
+}
+
+pre code {
+    border: none !important;
+    padding: none !important;
+}
+
+div.sourceCode > pre, td.sourceCode > pre {
+    border: none !important;
+}
+
+div.is-ignored {
+    display: none !important;
+}
+
+/* Syntax highlighting */
+code span.kw { color: #ffa600 !important; } /* Keyword */
+code span.dt { color: #85c600 !important; } /* DataType */
+code span.dv { color: #e0374f !important; } /* DecVal */
+code span.bn { color: #e0374f !important; } /* BaseN */
+code span.fl { color: #e0374f !important; } /* Float */
+code span.ch { color: #e0374f !important; } /* Char */
+code span.st { color: #e0374f !important; } /* String */
+code span.co { color: #0099bc !important; } /* Comment */
+code span.ot { color: #e50c88 !important; } /* Other */
+code span.al { color: #e0374f !important; } /* Alert */
+code span.fu { color: #d78787 !important; } /* Function */
+code span.re {                            } /* RegionMarker */
+code span.er { color: #ff0000 !important; font-weight: bold !important; } /* Error */
+
+span.qutehint {
+    opacity: 100% !important;
+    background: rgba(0, 0, 0, 0.8) !important;
+    color: #B3FF1D !important;
+    outline: 1px solid rgba(179,255,29,1) !important;
+    padding: 2px !important;
+}
+
+span.qutehint > font {
+    color: #e51688 !important;
+}
+
+/* For github stuff */
+
+.discussion-timeline, .timeline-comment {
+    width: 80% !important;
+}
+
+.new-discussion-timeline, .experiment-repo-nav {
+    width: 90% !important;
+}
+
+/* For 4chan */
+
+div.adg-rects, form#delform > div > div > iframe {
+    display: none !important;
+}
+
+div#quickReply textarea {
+    width: 550px !important;
+    height: 500px !important;
+}
+
+span.quote {
+    color: #789922 !important;
+}
+
+span.sjis, #quickReply .sjis {
+    font-family: 'IPAMonaPGothic','Mona','MS PGothic',monospace !important;
+}
+
+s, s a:not(:hover) {
+    color: #333 !important;
+    background: #333 !important;
+}
+
+s:hover, s:focus, s:hover a, s:hover span {
+    color: white !important;
+    background: black !important;
+}
+
+div.postContainer > div.post > div.file {
+    width: 800px !important;
+}
+
+span.nameBlock > span.n-pu {
+    background: url('https://s.4cdn.org/image/minileaf.gif') !important;
+}
+
+input#qrFile {
+    width: 60% !important;
+}
+
+body.is_thread > iframe {
+    display: none !important;
+}
+
+div.reply.highlight {
+    border: 1px solid #ff0 !important;
+}
+
+textarea[name=com] {
+    width: 1000px !important;
+    height: 300px !important;
+}
+
+tr#captchaFormPart {
+    display: none !important;
+}
+
+/* TeX images */
+
+img.tex, img.numberedequation, img.inlineformula, span.math,
+img.mwe-math-fallback-image-inline, img.illustration {
+    background-color: #bbb !important;
+    padding: 1px !important;
+}
+
+span.math * {
+    background: none !important;
+    border-color: black !important;
+}
+
+/* For devtalk.nvidia.com */
+
+div.widget-100 > div.board-topics > div.topic {
+    overflow: hidden !important;
+}
+
+/* For wikipedia */
+
+div[style^="position: absolute"] {
+    background: none !important;
+}
+
+/* For youtube */
+
+div#yt-dialog-bg, div.yt-dialog {
+    display: none !important;
+}
+
+/* Ad element hiding */
+
+div#_Ltg { /* google search results */
+    display: none !important
+}
+
+div.pyv-afc-ads-container { /* youtube search results */
+    display: none !important
+}

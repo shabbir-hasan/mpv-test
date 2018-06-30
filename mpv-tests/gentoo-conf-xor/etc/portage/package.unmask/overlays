@@ -1,0 +1,39 @@
+## Overlay unmasking
+
+# Bobwya
+www-client/firefox-kde-opensuse::bobwya
+kde-misc/kmozillahelper::bobwya
+
+# Booboo
+#games-arcade/taisei::booboo
+
+# Deter
+#gnome-extra/yad::deter
+
+# Emery
+#net-p2p/cjdns::emery
+#media-sound/squishyball::emery
+#media-fonts/unifraktur::emery
+
+# Gentoo-GPU
+#dev-util/glslang::gentoo-gpu
+#dev-util/SPIRV-Tools::gentoo-gpu
+dev-util/shaderc::gentoo-gpu
+media-libs/libplacebo::gentoo-gpu
+
+# Qt
+dev-qt/qtwebkit::qt
+=dev-qt/qtwebengine-5.9*::qt
+dev-qt/*:5/5.10::qt
+
+# Tristelune
+app-admin/rofi-pass::tristelune
+
+# Vapoursynth
+#media-libs/zimg::vapoursynth
+#media-libs/vapoursynth::vapoursynth
+#media-plugins/vapoursynth-ffmpegsource::vapoursynth
+#media-plugins/vapoursynth-flash3kyuu_deband::vapoursynth
+#media-plugins/vapoursynth-fmtconv::vapoursynth
+#media-plugins/vapoursynth-mvtools::vapoursynth
+#media-plugins/vapoursynth-nnedi3::vapoursynth

@@ -1,0 +1,1 @@
+py -3.6 -m pip install PyQt5 requests --upgrade

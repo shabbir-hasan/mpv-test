@@ -1,0 +1,9 @@
+[Unit]
+Description=Automatically force stuff into ZFS cache on boot and regularly
+
+[Timer]
+OnBootSec=5m
+OnUnitActiveSec=3h
+
+[Install]
+WantedBy=timers.target

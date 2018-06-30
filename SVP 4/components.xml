@@ -1,0 +1,476 @@
+<Packages>
+    <ApplicationName>SVP 4 Cracked</ApplicationName>
+    <ApplicationVersion>1.0.0</ApplicationVersion>
+    <Package>
+        <Name>ext</Name>
+        <Pixmap></Pixmap>
+        <Title>SVP extensions</Title>
+        <Description>SVP 4 Pro extensions</Description>
+        <Version>1.0.0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>0</Size>
+        <Dependencies></Dependencies>
+    </Package>
+    <Package>
+        <Name>deps</Name>
+        <Pixmap></Pixmap>
+        <Title>3rd-party software (mandatory)</Title>
+        <Description>Mandatory 3rd-party dependencies needed by SVP. The actual packages needed depend on Core selected.</Description>
+        <Version>1.0.0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>0</Size>
+        <Dependencies></Dependencies>
+    </Package>
+    <Package>
+        <Name>opt</Name>
+        <Pixmap></Pixmap>
+        <Title>3rd-party software (optional)</Title>
+        <Description>Optional 3rd-party software</Description>
+        <Version>1.0.0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>0</Size>
+        <Dependencies></Dependencies>
+    </Package>
+    <Package>
+        <Name>opt.mpc_hc32</Name>
+        <Pixmap></Pixmap>
+        <Title>[DS_32] MPC-HC 32-bit</Title>
+        <Description>MPC-HC (Media Player Classic - Home Cinema) 32-bit. The recommended DirectShow 32-bit video player.</Description>
+        <Version>1.7.11</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>13230896</Size>
+        <Dependencies></Dependencies>
+    </Package>
+    <Package>
+        <Name>opt.madvr</Name>
+        <Pixmap></Pixmap>
+        <Title>[DS_32][DS_64] madVR video renderer</Title>
+        <Description>madVR - high quality video renderer (GPU assisted). Supported by both 32-bit and 64-bit DirectShow video players.</Description>
+        <Version>0.91.7</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>20160723</Size>
+        <Dependencies></Dependencies>
+    </Package>
+    <Package>
+        <Name>opt.lavf</Name>
+        <Pixmap></Pixmap>
+        <Title>[DS_32][DS_64] LAV Filters</Title>
+        <Description>Open-Source DirectShow Media Splitter and Decoders for both 32-bit and 64-bit DirectShow video players.</Description>
+        <Version>0.69.0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>10494648</Size>
+        <Dependencies></Dependencies>
+    </Package>
+    <Package>
+        <Name>opt.reclock</Name>
+        <Pixmap></Pixmap>
+        <Title>[DS_32] ReClock</Title>
+        <Description>The purpose of ReClock Directshow Filter is to definitely get rid of jerky playback of video material. It is loaded in place of the default directsound audio renderer. Supported by 32-bit DirectShow video players only.</Description>
+        <Version>1.9.0.0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>1161504</Size>
+        <Dependencies></Dependencies>
+    </Package>
+    <Package>
+        <Name>core.i18n</Name>
+        <Pixmap></Pixmap>
+        <Title>Language files</Title>
+        <Description>SVP 4 UI translation files</Description>
+        <Version>102</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>705267</Size>
+        <Dependencies></Dependencies>
+        <Virtual>true</Virtual>
+    </Package>
+    <Package>
+        <Name>core.utils</Name>
+        <Pixmap></Pixmap>
+        <Title>Additional utilities</Title>
+        <Description>Additional utilities - CLInfo, MediaInfo, 4GB Patch, etc</Description>
+        <Version>1.1.1</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>4797757</Size>
+        <Dependencies></Dependencies>
+        <Virtual>true</Virtual>
+    </Package>
+    <Package>
+        <Name>core.manual</Name>
+        <Pixmap></Pixmap>
+        <Title>User manual</Title>
+        <Description>SVP 4 User Manual</Description>
+        <Version>1</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>0</Size>
+        <Dependencies></Dependencies>
+        <Virtual>true</Virtual>
+    </Package>
+    <Package>
+        <Name>core.full</Name>
+        <Pixmap></Pixmap>
+        <Title>SVP Manager (Pro)</Title>
+        <Description>SVP Manager (Pro) application</Description>
+        <Version>4.1.0.111-1</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>2714209</Size>
+        <Dependencies></Dependencies>
+        <Virtual>true</Virtual>
+    </Package>
+    <Package>
+        <Name>core.maintenance</Name>
+        <Pixmap></Pixmap>
+        <Title>SVP Maintenance Tool</Title>
+        <Description>SVP Maintenance Tool</Description>
+        <Version>1</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>0</Size>
+        <Dependencies></Dependencies>
+        <Virtual>true</Virtual>
+    </Package>
+    <Package>
+        <Name>core.qt</Name>
+        <Pixmap></Pixmap>
+        <Title>Qt 5</Title>
+        <Description>Qt 5 libraries</Description>
+        <Version>5.7.1</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>28773052</Size>
+        <Dependencies></Dependencies>
+        <Virtual>true</Virtual>
+    </Package>
+    <Package>
+        <Name>core</Name>
+        <Pixmap></Pixmap>
+        <Title>SVP Manager (Pro)</Title>
+        <Description>SVP 4 - SmoothVideo Project</Description>
+        <Version>4.0.0-6</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>173</Size>
+        <Dependencies>core.full,core.i18n,core.qt,core.utils,core.manual,core.maintenance</Dependencies>
+        <ForcedInstallation>true</ForcedInstallation>
+    </Package>
+    <Package>
+        <Name>deps.avisynth_plus</Name>
+        <Pixmap></Pixmap>
+        <Title>Avisynth+</Title>
+        <Description>Avisynth+ installer.</Description>
+        <Version>2455</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>3226768</Size>
+        <Dependencies></Dependencies>
+        <Virtual>true</Virtual>
+    </Package>
+    <Package>
+        <Name>deps.vc32_2015</Name>
+        <Pixmap></Pixmap>
+        <Title>Microsoft VC++ 2015 redistributable 32-bit</Title>
+        <Description>Microsoft VC++ 2015 redistributable 32-bit</Description>
+        <Version>14.0.0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>14458312</Size>
+        <Dependencies></Dependencies>
+        <Virtual>true</Virtual>
+    </Package>
+    <Package>
+        <Name>deps.avisynth32</Name>
+        <Pixmap></Pixmap>
+        <Title>[DS_32] Avisynth+ 32-bit</Title>
+        <Description>Avisynth+ 32-bit - required by DirectShow 32-bit Core.</Description>
+        <Version>2455</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>0</Size>
+        <Dependencies>deps.avisynth_plus,deps.vc32_2015</Dependencies>
+    </Package>
+    <Package>
+        <Name>deps.ffdshow32.install</Name>
+        <Pixmap></Pixmap>
+        <Title>ffdshow 32-bit</Title>
+        <Description>ffdshow 32-bit own installer</Description>
+        <Version>4533</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>4840915</Size>
+        <Dependencies></Dependencies>
+        <Virtual>true</Virtual>
+    </Package>
+    <Package>
+        <Name>deps.ffdshow32</Name>
+        <Pixmap></Pixmap>
+        <Title>[DS_32] ffdshow filters 32-bit</Title>
+        <Description>ffdshow DirectShow decoding filters (32-bit). Required by DirectShow 32-bit Core.</Description>
+        <Version>4533</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>0</Size>
+        <Dependencies>deps.ffdshow32.install</Dependencies>
+    </Package>
+    <Package>
+        <Name>core.flow32</Name>
+        <Pixmap></Pixmap>
+        <Title>[DS_32] Core for DirectShow 32-bit</Title>
+        <Description>SVP core libraries (SVPflow) for 32-bit DirectShow video players such as MPC-HC, Daum PotPlayer or Kodi.</Description>
+        <Version>4.0.0.136</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>2765362</Size>
+        <Dependencies>deps.avisynth32,deps.ffdshow32</Dependencies>
+    </Package>
+    <Package>
+        <Name>deps.ffdshow64.install</Name>
+        <Pixmap></Pixmap>
+        <Title>ffdshow 64-bit</Title>
+        <Description>ffdshow 64-bit own installer</Description>
+        <Version>4533</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>5028479</Size>
+        <Dependencies></Dependencies>
+        <Virtual>true</Virtual>
+    </Package>
+    <Package>
+        <Name>deps.ffdshow64</Name>
+        <Pixmap></Pixmap>
+        <Title>[DS_64] ffdshow filters 64-bit</Title>
+        <Description>ffdshow DirectShow decoding filters (64-bit). Required by DirectShow 64-bit Core.</Description>
+        <Version>4533</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>0</Size>
+        <Dependencies>deps.ffdshow64.install</Dependencies>
+    </Package>
+    <Package>
+        <Name>deps.vc64_2015</Name>
+        <Pixmap></Pixmap>
+        <Title>Microsoft VC++ 2015 redistributable 64-bit</Title>
+        <Description>Microsoft VC++ 2015 redistributable 64-bit</Description>
+        <Version>14.0.0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>15303024</Size>
+        <Dependencies></Dependencies>
+        <Virtual>true</Virtual>
+    </Package>
+    <Package>
+        <Name>deps.avisynth64</Name>
+        <Pixmap></Pixmap>
+        <Title>[DS_64] Avisynth+ 64-bit</Title>
+        <Description>Avisynth+ 64-bit - required by DirectShow 64-bit Core.</Description>
+        <Version>2455</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>0</Size>
+        <Dependencies>deps.avisynth_plus,deps.vc64_2015</Dependencies>
+    </Package>
+    <Package>
+        <Name>core.flow64</Name>
+        <Pixmap></Pixmap>
+        <Title>[DS_64] Core for DirectShow 64-bit</Title>
+        <Description>SVP core libraries (SVPflow) 64-bit for DirectShow video players.</Description>
+        <Version>4.0.0.136-2</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>3491368</Size>
+        <Dependencies>deps.avisynth64,deps.ffdshow64</Dependencies>
+    </Package>
+    <Package>
+        <Name>deps.python64</Name>
+        <Pixmap></Pixmap>
+        <Title>Python 3.6 64-bit</Title>
+        <Description>Python 3.6 portable edition.</Description>
+        <Version>3.6.0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>12772498</Size>
+        <Dependencies>deps.vc64_2015</Dependencies>
+        <Virtual>true</Virtual>
+    </Package>
+    <Package>
+        <Name>opt.vps_portable64</Name>
+        <Pixmap></Pixmap>
+        <Title>[VPS_64] VapourSynth 64-bit</Title>
+        <Description>VapourSynth frame server - portable edition. Required by mpv. Won't work in Windows XP!</Description>
+        <Version>37</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>7473157</Size>
+        <Dependencies>deps.python64</Dependencies>
+        <Virtual>true</Virtual>
+    </Package>
+    <Package>
+        <Name>core.flow64vs</Name>
+        <Pixmap></Pixmap>
+        <Title>[VPS_64] Core for Vapoursynth 64-bit</Title>
+        <Description>SVP core libraries (SVPflow) for Vapoursynth 64-bit. This's required for the mpv and VLC support.</Description>
+        <Version>4.1.0.141</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>1717288</Size>
+        <Dependencies>opt.vps_portable64</Dependencies>
+    </Package>
+    <Package>
+        <Name>core.vlc64</Name>
+        <Pixmap></Pixmap>
+        <Title>[VPS_64] VLC 64-bit support (BETA)</Title>
+        <Description>A VLC video filter to enable SVP support, requires Vapoursynth 64-bit core.</Description>
+        <Version>0.9.0.102</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>847400</Size>
+        <Dependencies>core.flow64vs,opt.vps_portable64</Dependencies>
+    </Package>
+    <Package>
+        <Name>deps.python32</Name>
+        <Pixmap></Pixmap>
+        <Title>Python 3.5 32-bit</Title>
+        <Description>Python 3.5 portable edition (32-bit).</Description>
+        <Version>3.5.1</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>10542926</Size>
+        <Dependencies>deps.vc32_2015</Dependencies>
+        <Virtual>true</Virtual>
+    </Package>
+    <Package>
+        <Name>deps.pythonqt</Name>
+        <Pixmap></Pixmap>
+        <Title>PythonQt</Title>
+        <Description>Dynamic Python binding for Qt Applications</Description>
+        <Version>3.1-2</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>1825832</Size>
+        <Dependencies>core.qt,deps.python32</Dependencies>
+        <Virtual>true</Virtual>
+    </Package>
+    <Package>
+        <Name>ext.tube.ydl</Name>
+        <Pixmap></Pixmap>
+        <Title>youtube-dl engine</Title>
+        <Description>A Python program to download videos from YouTube and a few more sites.</Description>
+        <Version>2017.04.03</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>4171284</Size>
+        <Dependencies></Dependencies>
+        <Virtual>true</Virtual>
+    </Package>
+    <Package>
+        <Name>ext.tube.i18n</Name>
+        <Pixmap></Pixmap>
+        <Title>SVPtube Language files</Title>
+        <Description>SVPtube UI translation files</Description>
+        <Version>101</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>36708</Size>
+        <Dependencies></Dependencies>
+        <Virtual>true</Virtual>
+    </Package>
+    <Package>
+        <Name>ext.tube</Name>
+        <Pixmap></Pixmap>
+        <Title>SVPtube 2</Title>
+        <Description>Online videos extractor (using youtube_dl engine)</Description>
+        <Version>2.0.0.110</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>372264</Size>
+        <Dependencies>ext.tube.ydl,ext.tube.i18n,deps.pythonqt</Dependencies>
+    </Package>
+    <Package>
+        <Name>deps.ffmpeg32</Name>
+        <Pixmap></Pixmap>
+        <Title>ffmpeg 32-bit static build</Title>
+        <Description>A complete, cross-platform solution to record, convert and stream audio and video.</Description>
+        <Version>3.2.2</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>35449543</Size>
+        <Dependencies></Dependencies>
+        <Virtual>true</Virtual>
+    </Package>
+    <Package>
+        <Name>ext.tube_ffmpeg</Name>
+        <Pixmap></Pixmap>
+        <Title>SVPtube 2 video downloading</Title>
+        <Description>Enable video downloading in SVPtube via ffmpeg</Description>
+        <Version>1.0</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>30824</Size>
+        <Dependencies>ext.tube,deps.ffmpeg32</Dependencies>
+    </Package>
+    <Package>
+        <Name>ext.light.i18n</Name>
+        <Pixmap></Pixmap>
+        <Title>SVPlight Language files</Title>
+        <Description>SVPlight UI translation files</Description>
+        <Version>101</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>38346</Size>
+        <Dependencies></Dependencies>
+        <Virtual>true</Virtual>
+    </Package>
+    <Package>
+        <Name>ext.light</Name>
+        <Pixmap></Pixmap>
+        <Title>SVPlight</Title>
+        <Description>LED lighting hardware controller</Description>
+        <Version>2.0.0.106</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>1879896</Size>
+        <Dependencies>ext.light.i18n</Dependencies>
+    </Package>
+    <Package>
+        <Name>opt.mpv64.angle</Name>
+        <Pixmap></Pixmap>
+        <Title>[VPS_64] ANGLE libraries</Title>
+        <Description>The API is mainly designed to bring high performance OpenGL compatibility by translating calls to Direct3D, which has much better driver support.</Description>
+        <Version>2.1.0-1</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>7050295</Size>
+        <Dependencies></Dependencies>
+        <Virtual>true</Virtual>
+    </Package>
+    <Package>
+        <Name>opt.mpv64</Name>
+        <Pixmap></Pixmap>
+        <Title>[VPS_64] mpv video player</Title>
+        <Description>mpv video player - special build for SVP. Note that other mpv builds won't work with SVP!</Description>
+        <Version>0.24-1</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>32772394</Size>
+        <Dependencies>opt.vps_portable64,opt.mpv64.angle</Dependencies>
+    </Package>
+    <Package>
+        <Name>opt.mpv_dll64</Name>
+        <Pixmap></Pixmap>
+        <Title>[VPS_64] mpv shared library</Title>
+        <Description>mpv shared library - special build for SVP. Needed for the libmpv-based video players, requires system-wide installation of Pyton 3.5 and Vapoursynth. Note that other builds of libmpv won't work with SVP!</Description>
+        <Version>0.24-1</Version>
+        <LastUpdateDate></LastUpdateDate>
+        <InstallDate>2018-05-16</InstallDate>
+        <Size>39350979</Size>
+        <Dependencies>opt.vps_portable64,opt.mpv64.angle</Dependencies>
+    </Package>
+</Packages>

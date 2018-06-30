@@ -1,0 +1,184 @@
+http://bbs.vcb-s.com/thread-2730-1-1.html
+
+
+# software solution
+Hwdec=no
+
+# high priority
+Priority=high
+
+Profile=gpu-hq
+# gpu-hq contains:
+# dscale=mitchell
+# dither-depth=auto
+# correct-downscaling=yes
+# sigmoid-upscaling=yes
+# deband=yes
+
+### gpu-api choice?
+## macOS: only opengl optional
+## Linux: vulkan or opengl, recommended vulkan
+## Windows: vulkan, d3d11, and opengl are optional. The theoretical performance of the three vulkan is the best, and the actual use may not be much different.
+## Wait for https://github.com/mpv-player/mpv/issues/5237 After the feature request is implemented, the high bit depth monitor
+The ## user d3d11 exclusive screen is the only way out. It hasn't been implemented yet, so using vulkan is not bad. Vulkan in the future of high depth in windows
+The support for ## is currently unknown.
+# The three cannot coexist, remove the '#' enable at the beginning of the line, and disable the '#'
+#----------------------------------------
+### Use d3d11 (mpv for windows default. The graphics card must be adaptive, otherwise the performance is worse than vulkan)
+Gpu-api=d3d11
+#----------------------------------------
+### or use vulkan
+# gpu-api=vulkan
+## If you use vulkan and it is an N card, you can try
+# spirv-compiler=nvidia
+#----------------------------------------
+### Or use opengl
+# gpu-api=opengl
+# For windows, use angle backend
+# gpu-context=angle
+
+# may help with 4K videos
+Vd-lavc-dr=yes
+Opengl-pbo=yes
+
+# If you want to insert other video filters, such as deint or SVP, you should remove the comment of the following line
+#hr-seek-framedrop=no
+
+# "ReClock" replacement
+Video-sync=display-resample
+Video-sync-max-video-change=5
+
+Temporal-dither
+Dither-size-fruit=7 # Default 6. Will delay mpv startup slightly
+
+# smooth motion
+Interpolation
+Blend-subtitles=yes
+# interpolation algorithm used. The official document currently recommends oversample. But mitchell was also used as the default option. Catmull_rom is also supported.
+# Overall mitchell is more smooth, but there will be blur. Oversample no blur, restore 24 frame playback.
+# For discussion see https://github.com/mpv-player/mpv/issues/2685
+Tscale=oversample
+
+# If you want to see the log, uncomment this line. Mpv.log will be saved to the desktop
+#log-file="~~desktop/mpv.log"
+
+# Can fix stuttering in some cases, in other cases probably causes it. Try it if you experience stuttering on macOS.
+#opengl-early-flush=no
+
+Icc-profile-auto
+Icc-3dlut-size=256x256x256 # The default is 64x64x64. Will delay mpv startup slightly
+
+# hdr-compute-peak # If you don't have a blue screen, you can leave it on. This may help HDR->SDR
+
+# Create a shaders_cache empty folder in the directory where mpv.conf is located to save compiled GPU shaders and accelerate startup
+Gpu-shader-cache-dir="~~/shaders_cache"
+
+# Do not quit after playing
+Keep-open=yes
+
+Ontop # combined with fullscreen, likely to enter fullscreen exclusive mode
+
+# In order to deal with VFR, disable refresh rate switching
+# The following script option is mainly used for autospeedwin (automatically adjust the refresh rate of the monitor)
+#script-opts=autospeed-nircmd=true,autospeed-speed=false,autospeed-nircmdc="C:\nircmd-x64\nircmdc.exe",autospeed-monitor=0,autospeed-dwidth=1920,autospeed-dheight= 1080,autospeed-bdepth=32,autospeed-rates="23;24;25;29;30;50;59;60",autospeed-exitrate=60,autospeed-minspeed=0.9,autospeed-maxspeed=1.1,autospeed- Osd=true,autospeed-osdtime=10,autospeed-osdkey=y,autospeed-estfps=false,autospeed-spause=4
+# Note that you need to download nircmdc yourself and then give the absolute path in autospeed-nircmdc. Or add the nircmdc.exe location to the PATH
+# autospeed-monitor=0 is the primary monitor, 1, 2, 3... is the other secondary monitor
+# dwidth dheight bdepth width height and bit depth
+# autospeed-rates="23;24;25;29;30;50;59;60",autospeed-exitrate=60 The refresh rate supported by the monitor and the refresh rate that should be returned upon exit. 23 refers to 23.976
+# autospeed-spause=4 Automatic pause time in seconds
+
+# WASAPI Audio Output (Windows)
+# Change the audio output accordingly for other systems
+Ao=wasapi
+Audio-exclusive=yes
+Audio-delay=0.04 # second. Projector 50ms input lag. Audio 10ms buffer.
+# Forcibly resample to 96kHz, 24bit (audio device hardware support required). note! Not necessary! Do not need to resample comment below the two lines
+Audio-samplerate=96000
+Audio-format=s32
+
+# If the sound of some channels does not appear when the multichannel movie is played on a two-channel system, try to force the setting to two channels.
+#audio-channels=stereo
+# Normalization:
+#audio-normalize-downmix=yes
+
+Sub-auto=fuzzy
+Sub-file-paths=subs
+Slang=chi,zh-CN,sc,chs
+#sid=1
+
+Audio-file-auto=fuzzy
+#audio-file-paths=audio
+Alang=jpn,ja,eng,en
+#aid=1
+# alang doesn't seem to specify that the audio is stereo, and often chooses tracks I don't want
+If there is a similar situation, use aid=1 to always select the first track and manually tune it. This I did not find a good solution
+# has submitted a feature request, see
+# https://github.com/mpv-player/mpv/issues/5133
+# https://github.com/mpv-player/mpv/issues/5433
+
+Screenshot-format=png
+Screenshot-tag-colorspace=yes
+Screenshot-high-bit-depth=yes
+#screenshot-png-compression=0
+#screenshot-png-filter=0
+
+# 32-bit floating-point precision processing like madVR
+Fbo-format=rgba32f
+
+Cscale=haasnsoft
+# Following different resolutions and video frame rate settings up / down algorithm, in order to obtain the best results can not drop the frame
+
+# 1080 * 1.414213 / 4 = 381.8
+[low] # 240p 360p, enable double up to 4x.
+Profile-desc=cond:(p["video-params/w"]<=678 and p["video-params/h"]<=381)
+Glsl-shaders-clr
+Glsl-shaders-append="~~/shaders/KrigBilateral.glsl"
+Glsl-shaders-append="~~/shaders/nnedi3-nns32-win8x4.hook"
+Glsl-shaders-append="~~/shaders/nnedi3-nns32-win8x4.hook"
+Scale=ewa_lanczossharp
+Glsl-shaders-append="~~/shaders/adaptive-antiringing.glsl"
+
+# 1080 / 16 * 9 = 607.5
+[SD] # 480p 576p
+Profile-desc=cond:((p["video-params/w"]<1080 and p["video-params/h"]<608) and (p["video-params/w"]>678 or p ["video-params/h"]>381))
+Glsl-shaders-clr
+Glsl-shaders-append="~~/shaders/KrigBilateral.glsl"
+Glsl-shaders-append="~~/shaders/nnedi3-nns64-win8x4.hook"
+Scale=ewa_lanczossharp
+Glsl-shaders-append="~~/shaders/adaptive-antiringing.glsl"
+
+# 1080 * 1.414213 / 2 = 763.7
+[HD30] # 640p 720p 30fps
+Profile-desc=cond:((p["video-params/w"]<1358 and p["video-params/h"]<764) and (p["video-params/w"]>=1080 or p["video-params/h"]>=608) and p["container-fps"]<31 and p["estimated-vf-fps"]<31)
+Glsl-shaders-clr
+Glsl-shaders-append="~~/shaders/KrigBilateral.glsl"
+Glsl-shaders-append="~~/shaders/nnedi3-nns32-win8x4.hook"
+
+[HD60] # 640p 720p 60fps
+Profile-desc=cond:((p["video-params/w"]<1358 and p["video-params/h"]<764) and (p["video-params/w"]>=1080 or p["video-params/h"]>=608) and ((p["container-fps"]<31 and p["estimated-vf-fps"]>=31) or p["container-fps" ]>=31))
+Glsl-shaders-clr
+Glsl-shaders-append="~~/shaders/ravu-r4-chroma-left-smoothtest1.hook"
+Scale=ewa_lanczossharp
+Glsl-shaders-append="~~/shaders/adaptive-antiringing.glsl"
+
+[FHD] # 1080p
+Profile-desc=cond:((p["video-params/w"]<=1920 and p["video-params/h"]<=1080) and (p["video-params/w"]>= 1358 or p["video-params/h"]>=764))
+Glsl-shaders-clr
+Glsl-shaders-append="~~/shaders/ravu-r4-chroma-left-smoothtest1.hook"
+Scale=ewa_lanczossharp
+Glsl-shaders-append="~~/shaders/adaptive-antiringing.glsl"
+
+[2K30] # 1440p
+Profile-desc=cond:((p["video-params/w"]<=2560 and p["video-params/h"]<=1440) and (p["video-params/w"]>1920 Or p["video-params/h"]>1080) and p["container-fps"]<31 and p["estimated-vf-fps"]<31)
+Glsl-shaders-clr
+Glsl-shaders-append="~~/shaders/ravu-r4-chroma-left-smoothtest1.hook"
+
+# 4K videos
+[4K30] # low fps: use SSIM to downscale
+Profile-desc=cond:((p["video-params/w"]>2560 or p["video-params/h"]>1440) and p["container-fps"]<31 and p["estimated -vf-fps"]<31)
+Glsl-shaders-clr
+Glsl-shaders-append="~~/shaders/SSimDownscaler.glsl"
+
+[UHD60] # high fps: use no glsl-shaders
+Profile-desc=cond:((p["video-params/w"]>1920 or p["video-params/h"]>1080) and ((p["container-fps"]<31 and p[ "estimated-vf-fps"]>=31) or p["container-fps"]>=31))
+Glsl-shaders-clr

@@ -1,0 +1,2 @@
+#!/bin/sh
+pgrep palemoon >/dev/null && exec /usr/bin/palemoon --private-window >/dev/null 2>&1

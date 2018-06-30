@@ -1,0 +1,43 @@
+# required by app-editors/neovim-0.1.4::gentoo
+# required by dev-python/neovim-python-client-0.1.9::gentoo
+# required by dev-python/neovim-python-client (argument)
+>=dev-lua/lpeg-1.0.0-r1 luajit
+# required by net-mail/notmuch-0.22-r2::gentoo[crypt]
+# required by net-mail/notmuch (argument)
+>=dev-libs/gmime-2.6.20-r3 smime
+# required by kde-base/kdelibs-4.14.21::gentoo[crypt]
+# required by app-office/calligra-l10n-2.9.11::gentoo
+# required by app-office/calligra-2.9.11::gentoo
+# required by @selected
+# required by @world (argument)
+>=app-crypt/qca-2.1.1-r1 qt4
+# required by app-editors/neovim-0.1.4::gentoo
+# required by dev-python/neovim-python-client-0.1.9::gentoo
+# required by dev-python/neovim-python-client (argument)
+>=dev-lua/mpack-1.0.2 luajit
+# required by app-text/llpp-22_p20160324::gentoo
+# required by llpp (argument)
+>=dev-ml/lablgl-1.05-r1 glut
+# required by app-misc/anki-2.0.43::gentoo
+# required by anki (argument)
+>=dev-python/PyQt4-4.12 webkit
+# required by app-i18n/scim-anthy-1.2.7-r1::gentoo
+# required by scim-anthy (argument)
+>=app-i18n/scim-1.4.17 gtk3
+# required by app-office/libreoffice-6.0.1.1::gentoo
+# required by libreoffice (argument)
+>=dev-libs/xmlsec-1.2.25 nss
+# required by net-print/cups-filters-1.20.0::gentoo[postscript]
+# required by net-print/cups-2.2.6::gentoo
+# required by cups (argument)
+>=app-text/ghostscript-gpl-9.21 cups
+# required by media-sound/ladish-1::audio-overlay
+# required by ladish (argument)
+>=media-sound/jack2-1.9.12-r1 dbus
+# required by media-sound/teamspeak-client-bin-3.1.8::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-qt/qtwebengine-5.10.1 geolocation
+# required by dev-python/python-magic-0.4.15::gentoo
+# required by python-magic (argument)
+>=sys-apps/file-5.33 -python

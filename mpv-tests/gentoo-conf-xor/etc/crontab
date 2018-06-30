@@ -1,0 +1,8 @@
+# for cronie
+# $Id$
+
+# Global variables
+SHELL=/bin/sh
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MAILTO=nand
+HOME=/

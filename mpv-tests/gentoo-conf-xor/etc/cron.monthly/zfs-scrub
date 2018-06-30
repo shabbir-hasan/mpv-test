@@ -1,0 +1,3 @@
+#!/bin/sh
+POOL=yggdrasil
+/sbin/zpool scrub ${POOL}

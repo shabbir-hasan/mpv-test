@@ -1,0 +1,440 @@
+# for alias expansion
+alias sudo='sudo '
+
+alias grep='grep --color=auto'
+alias igrep='grep -i'
+
+# some more ls aliases
+alias l='ls'
+alias ll='ls -l --si'
+alias la='ll -A'
+alias lt='ll -rt'
+
+alias df='df --total -H'
+alias du='du --si'
+alias ds='du --total --summarize -- *'
+
+alias numa='numactl -N0 -l --'
+alias wine='numa wine'
+
+# allow colors in less and tmux
+alias less='less -R'
+alias tmux='tmux -2'
+
+# Sort by memory usage per default
+#alias htop='htop -s PERCENT_MEM'
+
+# start in fullscreen mode
+alias sxiv='sxiv -Zf'
+
+# aliases because the profile system sucks
+alias mvi='mpv --profile=image'
+#alias mvb='mpv --profile=booru --playlist=-'
+alias mpa='mpv --profile=audio'
+alias mpn='mpv --profile=normalize'
+alias mpan='mpa --profile=normalize'
+alias mpy='mpv --profile=yeti'
+alias mpl='mpv --loop-file'
+alias mp4='mpv --profile=4k'
+alias mpviz='mpv --script-opts=visualizer-mode=force'
+
+mvb() {
+    mpv --profile=booru --playlist=<(booru $@)
+}
+
+# quicker root delete
+alias srm='sudo rm'
+
+# prefer floating vim over gvim
+alias vim='nvim'
+alias gvim='urxvt -e vim'
+alias gview='urxvt -e vim'
+alias svim='sudo /usr/bin/vim'
+
+# new mail client and stuff
+alias m='~/dev/bower/bower'
+
+# restore secondary monitor after fullscreen botches it
+#alias fixmon='xrandr --output DP-0 --mode 4096x2160 --primary --output DVI-I-1 --mode 1920x1200 --rotate left --pos 4096x120'
+#alias fixmon='xrandr --output DVI-I-1 --mode 1920x1200 --primary'
+alias fixmon='xrandr --output DisplayPort-0 --mode 3840x2160 --primary'
+
+#alias fixcol='argyll-dispwin -I -d2 ~/icc/main.icc; argyll-dispwin -I -d1 ~/icc/alt.icc'
+#alias fixcol='argyll-dispwin -I -d1 ~/icc/alt.icc'
+alias fixcol='argyll-dispwin -I -d1 ~/icc/main.icc'
+alias fixpulse='sudo fixpulse'
+
+# fix fanspeed
+alias fanspeed='aticonfig --pplib-cmd "set fanspeed 0 18"'
+
+# ghetto post-it notes
+alias note='cat >> ~/notes'
+
+# 16 core make (ht)
+alias make='make -j32'
+alias waifu='CFLAGS="${CFLAGS} -fdiagnostics-color=always" ./waf'
+#alias ninja='ninja -Cbuild'
+
+# Attach to weechat inside dtach
+alias weechat='dtach -a /tmp/weechat'
+
+# scan for replaygain
+alias replayscan='find -L . -name \*.flac -printf %h\\n | sort -u | while read -r d; do flacgain "$d"/*.flac; done'
+alias mp3scan='find -L . -name \*.mp3 -printf %h\\n | sort -u | while read -r d; do mp3gain "$d"/*.mp3; done'
+
+# automatically copy URL
+alias wgetpaste='wgetpaste -X'
+alias hpaste='wgetpaste -l Haskell'
+
+# automatically resume and stuff
+alias wget='wget -c -4 --timeout 10'
+alias youtube-dl='youtube-dl --continue --no-part --no-mtime'
+
+# portage aliases + auto sudo
+alias emerge='sudo emerge'
+#alias eselect='sudo eselect'
+alias ebuild='sudo ebuild'
+#alias equery='sudo equery'
+alias eix-update='sudo eix-update'
+alias eix-sync='sudo eix-sync'
+#alias eix='sudo eix'
+alias layman='sudo layman'
+alias genlop='sudo genlop'
+alias qlop='sudo qlop -H'
+alias egencache='sudo egencache'
+alias econf='sudo dispatch-conf'
+alias eclean='sudo eclean'
+alias erebuild='sudo revdep-rebuild'
+alias edepclean='emerge --depclean'
+alias module-rebuild='sudo module-rebuild'
+#alias rc-update='sudo rc-update'
+#alias rc-config='sudo rc-config'
+#alias rc-service='sudo rc-service'
+#alias systemctl='sudo systemctl'
+alias haskell-updater='sudo haskell-updater'
+alias hackport='sudo hackport -p /usr/local/portage'
+alias ghc-pkg='sudo ghc-pkg'
+alias elogv='sudo elogv'
+alias btrfs='sudo btrfs'
+alias gcc-config='sudo gcc-config'
+alias dmesg='sudo dmesg'
+alias paxctl-ng='sudo paxctl-ng'
+
+# stuff
+alias sc='systemctl'
+alias jc='journalctl'
+alias scu='sc --user'
+alias jcu='jc --user'
+alias t-r='transmission-remote'
+
+# SELinux
+alias ausearch='sudo ausearch'
+alias sestatus='sudo sestatus'
+alias semanage='sudo semanage'
+alias sesearch='sudo sesearch'
+alias semodule='sudo semodule'
+alias getsebool='sudo getsebool'
+alias setsebool='sudo setsebool'
+alias setenforce='sudo setenforce'
+alias rlpkg='sudo rlpkg'
+alias restorecon='sudo restorecon'
+alias chcon='sudo chcon'
+
+alias esync='emerge --ask=n --sync'
+alias epull='layman -S && hackport update && esync && eix-update'
+alias eworld='emerge --update --newuse --deep --ignore-built-slot-operator-deps=n @world'
+alias deworld='emerge --ask=n --deselect'
+alias esmart='sudo smart-live-rebuild -E'
+alias eupdate='epull && eworld && haskell-updater && esmart'
+
+# squashfs maintenance aliases
+#alias squash-save='sudo squash-save'
+#alias squash-reload='for i in /etc/init.d/squash*; do sudo $i restart; done'
+#alias squash-update='squash-save && squash-reload'
+
+# dual booting
+alias pm-restart='sudo pm-restart'
+
+# make sure we don't break our system
+#alias restart='squash-save && sudo reboot'
+#alias shutdown='squash-save && sudo poweroff'
+
+# start djbdns manually
+# alias djbdns='sudo sh -c "nohup /var/dnscache/run >/dev/null 2>&1 &"'
+
+# quick ssh access to VPS
+alias vps='ssh nanovps -l root'
+
+# Run password-store with the primary selection as default
+alias pass='PASSWORD_STORE_X_SELECTION=primary pass'
+
+# Syncplay without GUI support
+alias syncplay='/home/nand/dev/syncplay/syncplayClient.py --no-gui'
+
+# ln with absolute paths
+aln() {
+  LNARGS=
+  while [[ $1 == -* ]]; do
+    LNARGS="$LNARGS $1"
+    shift
+  done
+
+  P=$(readlink -f "$1")
+  shift
+  ln $LNARGS "$P" "$*"
+}
+
+# More aggressive rate limiting
+alias trickle='trickle -s -w 50 -t 0.5'
+alias nethogs='sudo nethogs eth0'
+alias scpl='scp -l 400'
+
+# Some darcs aliases
+alias da='darcs'
+
+# Darcs colordiff
+daff () {
+  darcs diff $@ | colordiff
+}
+
+# Deselect a package, and remove it too
+demerge() {
+  deworld $@ && edepclean
+}
+
+spr() {
+    local src='-'
+    [ "$1" ] && src="$1"
+    curl -sF "sprunge=<$src" https://sprunge.us | tee /dev/stderr | xclip -selection primary
+}
+
+#up() {
+#    local src='-;type=text/plain;charset=utf-8;filename=stdin.txt'
+#    [ "$1" ] && src="$1"
+#    curl -sF "file=@$src" https://0x0.st | tee /dev/stderr | xclip -selection primary
+#}
+
+up() {
+    ~/bin/up "$@" | tee /dev/stderr | xclip
+}
+
+short() {
+    curl -sF "shorten=$1" https://0x0.st | tee /dev/stderr | xclip -selection primary
+}
+
+upfs() {
+    hash=$(cat "$@" | ssh nand@tina '/snap/bin/ipfs add -q')
+    up "https://ipfs.io/ipfs/$hash"
+}
+
+#mailsync() {
+#  nohup mswatch -c ~/.mswatch-nanovps &>/dev/null &
+#  nohup mswatch -c ~/.mswatch-uulm    &>/dev/null &
+#  #nohup mswatch -c ~/.mswatch-gmail   &>/dev/null &
+#}
+
+# Set up PTT redirection
+alias evrouter='sudo evrouter /dev/input/by-id/usb-Kingsis_Peripherals_ZOWIE_Gaming_mouse-event-mouse -c ~/.evrouterrc'
+
+# Firejail aliases
+alias firejail='firejail --quiet'
+alias rtorrent='TERM=rxvt-unicode firejail rtorrent'
+
+alias :quit='exit'
+alias :q=':quit'
+
+# Git aliases
+alias add='git add'
+alias bisect='git bisect'
+alias branch='git branch'
+alias checkout='git checkout'
+alias clone='git clone'
+alias commit='git commit'
+#alias diff='git diff'
+alias fetch='git fetch'
+#alias grep='git grep'
+alias init='git init'
+alias log='git log'
+alias merge='git merge'
+#alias mv='git mv'
+alias pull='git pull'
+alias push='git push'
+alias rebase='git rebase'
+#alias reset='git reset'
+#alias rm='git rm'
+alias show='git show'
+alias status='git status'
+alias tag='git tag'
+
+# More git aliases
+alias cherry-pick='git cherry-pick'
+alias blame='git blame'
+alias format-patch='git format-patch'
+alias remote='git remote'
+alias stash='git stash'
+alias submodule='git submodule'
+
+# Newer GHCi
+
+alias ghci-head='PATH="~/ghc-head/bin:$PATH" ghci'
+
+# Tag an image file with my monitor's colorspace
+
+itag() {
+  convert "$1" -profile ~/icc/main.icc "$1"
+}
+
+iscrot() {
+  import -depth 8 "$1" && itag "$1" && optipng "$1"
+}
+
+iup() {
+  local tmpfile=$(mktemp scrot.XXXXXXXXX.png)
+  iscrot "$tmpfile" && up "$tmpfile"
+  rm -f "$tmpfile"
+}
+
+jup() {
+  local tmpfile=$(mktemp scrot.XXXXXXXXX.jpg)
+  import -depth 8 -quality 90 "$tmpfile" && itag "$tmpfile" && up "$tmpfile"
+  rm -f "$tmpfile"
+}
+
+# Run my Ubuntu 15.10 VM
+
+startvm() {
+    sudo sh -c 'pgrep qemu || qemu-system-x86_64 -enable-kvm -cpu host -m 4096 -net nic -net bridge,br=br0 -drive file=/y/media/vms/ubuntu15.10-boot.qcow2,if=virtio -drive file=/dev/disk/by-uuid/5c5c3071-ab12-477d-8a25-de3dde26c973,cache=none,if=virtio,format=raw -boot c -vga qxl -spice port=5900,addr=127.0.0.1,disable-ticketing &' &>/dev/null \
+    && remote-viewer spice://127.0.0.1:5900 &>/dev/null &!
+}
+
+stopvm() {
+    sudo killall qemu-system_x86_64
+}
+
+# Compute a simple string hash
+
+sumcharvals() {
+    if [[ $# -eq 0 ]]; then
+      echo "Usage: $0 [string] [mod] [parameter]"
+      echo
+      echo "sums the char values of string and modulates with mod"
+      echo "if parameter is given, assign result to it, otherwise echo"
+      return 0
+    fi
+    local name=$1 sum=0
+    integer i
+    for (( i=1; i <= $#name; i++ )) {
+      (( sum+=##$name[i] ))
+      (( sum*=17 ))
+    }
+    [[ -n $2 ]] && (( sum%=$2 ))
+    if [[ -n $3 ]]; then
+      typeset -g $3=$sum
+    else
+      echo $sum
+    fi
+}
+
+# ☃ \o/
+source ~/dev/haskell/☃/client.zsh
+
+# SELinux helpers
+POLICY_LOCATION="/home/nand/dev/hardened-refpolicy/";
+
+# sefindif - Find interface definitions that have a string that matches the
+# given regular expression
+sefindif() {
+  REGEXP="$1";
+  if [ -d ${POLICY_LOCATION}/policy/modules ];
+  then
+    pushd ${POLICY_LOCATION}/policy/modules > /dev/null 2>&1;
+  elif [ -d ${POLICY_LOCATION}/include ];
+  then
+    pushd ${POLICY_LOCATION}/include > /dev/null 2>&1;
+  else
+    echo "Variable POLICY_LOCATION is not properly defined.";
+    return 1;
+  fi
+  for FILE in */*.if;
+  do
+    awk "BEGIN { P=1 } /(interface\(|template\()/ { NAME=\$0; P=0 }; /${REGEXP}/ { if (P==0) {P=1; print NAME}; if (NAME!=\$0) print };" ${FILE} | sed -e "s:^:${FILE}\: :g";
+  done
+  popd > /dev/null 2>&1;
+}
+
+# seshowif - Show the interface definition
+seshowif() {
+  INTERFACE="$1";
+  if [ -d ${POLICY_LOCATION}/policy/modules ];
+  then
+    pushd ${POLICY_LOCATION}/policy/modules > /dev/null 2>&1;
+  elif [ -d ${POLICY_LOCATION}/include ];
+  then
+    pushd ${POLICY_LOCATION}/include > /dev/null 2>&1;
+  else
+    echo "Variable POLICY_LOCATION is not properly defined.";
+    return 1;
+  fi
+  for FILE in */*.if;
+  do
+    grep -A 9999 "\(interface(\`${INTERFACE}'\|template(\`${INTERFACE}'\)" ${FILE} | grep -B 9999 -m 1 "^')";
+  done
+  popd > /dev/null 2>&1;
+}
+
+# sefinddef - Find macro definitions that have a string that matches the given
+# regular expression
+sefinddef() {
+  REGEXP="$1";
+  if [ -d ${POLICY_LOCATION}/policy/support ];
+  then
+    pushd ${POLICY_LOCATION}/policy/support > /dev/null 2>&1;
+  elif [ -d ${POLICY_LOCATION}/include/support ];
+  then
+    pushd ${POLICY_LOCATION}/include/support > /dev/null 2>&1;
+  else
+    echo "Variable POLICY_LOCATION is not properly defined.";
+    return 1;
+  fi
+  for FILE in *;
+  do
+    awk "BEGIN { P=1; } /(define\(\`[^\`]*\`$)/ { NAME=\$0; P=0 }; /${REGEXP}/ { if (P==0) {P=1; print NAME}; if (NAME!=\$0) print };" ${FILE};
+  done
+  popd > /dev/null 2>&1;
+}
+
+# seshowdef - Show the macro definition
+seshowdef() {
+  MACRONAME="$1";
+  if [ -d ${POLICY_LOCATION}/policy/support ];
+  then
+    pushd ${POLICY_LOCATION}/policy/support > /dev/null 2>&1;
+  elif [ -d ${POLICY_LOCATION}/include/support ];
+  then
+    pushd ${POLICY_LOCATION}/include/support > /dev/null 2>&1;
+  else
+    echo "Variable POLICY_LOCATION is not properly defined.";
+    return 1;
+  fi
+  for FILE in *.spt;
+  do
+    grep -A 9999 "define(\`${MACRONAME}'" ${FILE} | grep -B 999 -m 1 "')";
+  done
+  popd > /dev/null 2>&1;
+}
+
+sepathdecode() {
+	python -c "import base64; print(base64.b16decode(\"${1}\"));";
+}
+
+alias np='mpc -f "%artist% - %title%  \[%album%\]" current | xclip'
+alias winserver='wineserver'
+alias weather='curl wttr.in/Langenau'
+
+yt() {
+    mpn ytdl://ytsearch20:"$*"
+}
+
+yta() {
+    mpa ytdl://ytsearch20:"$*"
+}

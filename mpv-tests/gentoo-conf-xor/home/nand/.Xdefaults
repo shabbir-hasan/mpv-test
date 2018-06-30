@@ -1,0 +1,108 @@
+! URxvt stuff
+
+URxvt.font: xft:monospace:pixelsize=14
+
+URxvt.letterSpace:      true
+URxvt.saveLines:        12000
+URxvt.scrollBar:        false
+URxvt.urgentOnBell:     true
+
+URxvt.scrollTtyOutput:      false
+URxvt.scrollWithBuffer:     true
+URxvt.scrollTtyKeypress:    true
+
+URxvt.fading: 10
+URxvt.inputMethod: scim
+URxvt.preeditType: OverTheSpot
+
+! perl extensions
+URxvt.perl-ext: default,url-select,clipboard
+
+! for yankable URLs
+
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: newtab
+URxvt.url-select.button: -
+URxvt.matcher.pattern: \\b(?:(?:https?|ftp|file|mailto|magnet|git|ytdl):(?:[\\w\\-@;/?:&=%$+*~#\\p{N}]|(?![<>])\\p{S}|\\p{L}\\p{M}*|[\\w\\-@;/?:&=%$+*~#.!',]|(?![()[\\]])\\p{P})*(?:\\((?:[\\w\\-@;/?:&=%$+*~#\\p{N}]|(?![<>])\\p{S}|\\p{L}\\p{M}*|[\\w\\-@;/?:&=%$+*~#.!',]|(?![()[\\]])\\p{P})*\\)|\\[(?:[\\w\\-@;/?:&=%$+*~#\\p{N}]|(?![<>])\\p{S}|\\p{L}\\p{M}*|[\\w\\-@;/?:&=%$+*~#.!',]|(?![()[\\]])\\p{P})*]|<(?:[\\w\\-@;/?:&=%$+*~#\\p{N}]|(?![<>])\\p{S}|\\p{L}\\p{M}*|[\\w\\-@;/?:&=%$+*~#.!',]|(?![()[\\]])\\p{P})*>|(?:[\\w\\-@;/?:&=%$+*~#\\p{N}]|(?![<>])\\p{S}|\\p{L}\\p{M}*|[\\w\\-@;/?:&=%$+*~#.!',]|(?![()[\\]])\\p{P})?(?:[\\w\\-@;/?:&=%$+*~#\\p{N}]|(?![<>])\\p{S}|\\p{L}\\p{M}*))+|www\\.(?:[\\w\\-@;/?:&=%$+*~#\\p{N}]|(?![<>])\\p{S}|\\p{L}\\p{M}*|[\\w\\-@;/?:&=%$+*~#.!',]|(?![()[\\]])\\p{P})*(?:\\((?:[\\w\\-@;/?:&=%$+*~#\\p{N}]|(?![<>])\\p{S}|\\p{L}\\p{M}*|[\\w\\-@;/?:&=%$+*~#.!',]|(?![()[\\]])\\p{P})*\\)|\\[(?:[\\w\\-@;/?:&=%$+*~#\\p{N}]|(?![<>])\\p{S}|\\p{L}\\p{M}*|[\\w\\-@;/?:&=%$+*~#.!',]|(?![()[\\]])\\p{P})*]|<(?:[\\w\\-@;/?:&=%$+*~#\\p{N}]|(?![<>])\\p{S}|\\p{L}\\p{M}*|[\\w\\-@;/?:&=%$+*~#.!',]|(?![()[\\]])\\p{P})*>|(?:[\\w\\-@;/?:&=%$+*~#\\p{N}]|(?![<>])\\p{S}|\\p{L}\\p{M}*|[\\w\\-@;/?:&=%$+*~#.!',]|(?![()[\\]])\\p{P})?(?:[\\w\\-@;/?:&=%$+*~#\\p{N}]|(?![<>])\\p{S}|\\p{L}\\p{M}*))+|(?:[\\w\\-@;/?:&=%$+*~#\\p{N}]|(?![<>])\\p{S}|\\p{L}\\p{M}*|[\\w\\-@;/?:&=%$+*~#.!',]|(?![()[\\]])\\p{P})*(?:\\((?:[\\w\\-@;/?:&=%$+*~#\\p{N}]|(?![<>])\\p{S}|\\p{L}\\p{M}*|[\\w\\-@;/?:&=%$+*~#.!',]|(?![()[\\]])\\p{P})*\\)|\\[(?:[\\w\\-@;/?:&=%$+*~#\\p{N}]|(?![<>])\\p{S}|\\p{L}\\p{M}*|[\\w\\-@;/?:&=%$+*~#.!',]|(?![()[\\]])\\p{P})*]|<(?:[\\w\\-@;/?:&=%$+*~#\\p{N}]|(?![<>])\\p{S}|\\p{L}\\p{M}*|[\\w\\-@;/?:&=%$+*~#.!',]|(?![()[\\]])\\p{P})*>|(?:[\\w\\-@;/?:&=%$+*~#\\p{N}]|(?![<>])\\p{S}|\\p{L}\\p{M}*|[\\w\\-@;/?:&=%$+*~#.!',]|(?![()[\\]])\\p{P})?(?:[\\w\\-@;/?:&=%$+*~#\\p{N}]|(?![<>])\\p{S}|\\p{L}\\p{M}*))+(?:\\.com|\\.net|\\.org|\\.de|\\.co\\.uk)(?!\\S))
+! for using the clipboard
+
+URxvt.keysym.4-c: perl:clipboard:copy
+URxvt.keysym.4-v: perl:clipboard:paste
+
+! ???
+Xcursor.size: 48
+Xft.dpi: 150
+Xft.antialias: 0
+Xft.rgba: none
+Xft.hinting: 1
+Xft.hintstyle: hintfull
+
+! rofi stuff
+
+rofi.lines: 20
+rofi.width: 30
+rofi.columns: 3
+rofi.font: terminus 14
+rofi.bw: 2
+rofi.color-window: #0e1112,#75b2b3,#75b2b3
+rofi.color-normal: #0e1112,#ddccbb,#0B0E0E,#323232,#ddccbb
+rofi.hide-scrollbar: true
+rofi.terminal: urxvtc
+
+! photons color theme
+
+! slightly beige white
+!*foreground: #DDCCBB
+*foreground: #00AA00
+*background: #080C0D
+
+! black
+*color0: #080C0D
+
+! red
+*color1: #e0374f
+
+! green
+*color2: #85c600
+
+! orange/yellow
+*color3: #ffa600
+
+! blue
+*color4: #0099bc
+
+! pink
+*color5: #e50c88
+
+! light blue gray
+*color6: #7fc5c6
+
+! light gray
+*color7: #cccccc
+
+! very dark gray
+*color8: #283032
+
+! orange
+*color9: #ff5b47
+
+! light green
+*color10: #b3ff14
+
+! orange/yellow
+*color11: #ffaa04
+
+! light blue
+*color12: #5adede
+
+! raspberry
+*color13: #be4372
+
+! light blue gray
+*color14: #75b2b3
+
+! gray
+*color15: #eeeeee
+
+! border
+! #80766C

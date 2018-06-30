@@ -1,0 +1,10 @@
+[user]
+	name = Niklas Haas
+	email = git@haasn.xyz
+	signingkey = 81B27402
+[push]
+	default = current
+[color]
+	ui = true
+[core]
+	excludesfile = ~/.gitignore
